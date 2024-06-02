@@ -40,7 +40,7 @@ export default function Header() {
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link 
-                className={`${pathname === link.href ? "text-slate-700" : "text-stone-200"}`} 
+                className={`${pathname === link.href ? "text-black" : "text-neutral-500"}`} 
                 href={link.href}
               >
                 {link.label}

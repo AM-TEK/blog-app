@@ -6,9 +6,9 @@ export default async function PostsList() {
   const posts = await prisma.post.findMany();
 
   return (
-    <ul>
+    <ul className="flex flex-col items-center">
       {posts.map((post) => (
-        <li key={post.id} className="mb-3">
+        <li key={post.id} className="mb-3 border border-neutral-700 rounded p-2 max-w-xs w-full">
           <Link href={`/posts/${post.id}`}>{post.title}</Link>
         </li>
       ))}

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, BIZ_UDPGothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Container from "@/components/container";
 
-const inter = Inter({ subsets: ["latin"] });
+const biz = BIZ_UDPGothic({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -19,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-stone-200 bg-stone-700 min-h-screen`}>
+      <body className={`${biz.className} font-bold text-black bg-neutral-300 min-h-screen`}>
         <Container>
           <Header />
           {children}
