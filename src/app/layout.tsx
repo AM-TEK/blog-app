@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, BIZ_UDPGothic } from "next/font/google";
+import { BIZ_UDPGothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
