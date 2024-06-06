@@ -26,7 +26,6 @@ export default function Form() {
         name="image"
         accept="image/*"
         className="border rounded px-3 h-10 text-stone-600"
-        required
       />
       <button className="h-10 bg-blue-500 px-5 rounded text-white">
         Submit
