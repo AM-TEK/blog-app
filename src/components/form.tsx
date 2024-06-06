@@ -22,9 +22,9 @@ export default function Form() {
         required
       />
       <input
-        type="text"
-        name="imageUrl"
-        placeholder="Image URL for new post"
+        type="file"
+        name="image"
+        accept="image/*"
         className="border rounded px-3 h-10 text-stone-600"
         required
       />
