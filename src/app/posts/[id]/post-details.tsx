@@ -12,9 +12,9 @@ export default async function PostDetails({ params }: { params: { id: string } }
   }
 
   return (
-    <main className="px-7 pt-24 text-center">
-      <h1 className="text-5xl font-semibold mb-7">{post.title}</h1>
-      <p className="max-w-[700px] mx-auto border border-neutral-700">{post.body}</p>
+    <main className="text-center pt-28 px-5">
+      <h1 className="text-4xl md:text-5xl font-bold mb-5">{post.title}</h1>
+      <p className="max-w-[700px] mx-auto leading-8 border border-neutral-700">{post.body}</p>
     </main>
   );
 }
