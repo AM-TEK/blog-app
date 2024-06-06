@@ -23,7 +23,7 @@ export default function Form() {
       />
       <input
         type="file"
-        name="image"
+        name="imageUrl"
         accept="image/*"
         className="border rounded px-3 h-10 text-stone-600"
       />
