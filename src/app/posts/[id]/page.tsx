@@ -15,13 +15,20 @@ export default async function Page({ params }: { params: { id: string } }) {
     notFound();
   }
 
-   // Ensure the uploads directory exists
-   const uploadsDir = "./public/uploads";
-   try {
-     await fs.access(uploadsDir);
-   } catch (error) {
-     await fs.mkdir(uploadsDir, { recursive: true });
-   }
+   // Ensure the public/uploads directory exists
+  const publicDir = "./public";
+  const uploadsDir = "./public/uploads";
+  try {
+    await fs.access(publicDir);
+  } catch (error) {
+    await fs.mkdir(publicDir);
+  }
+
+  try {
+    await fs.access(uploadsDir);
+  } catch (error) {
+    await fs.mkdir(uploadsDir);
+  }
 
   const files = await fs.readdir("./public/uploads");
   const images = files
