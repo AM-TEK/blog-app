@@ -15,6 +15,14 @@ export default async function Page({ params }: { params: { id: string } }) {
     notFound();
   }
 
+   // Ensure the uploads directory exists
+   const uploadsDir = "./public/uploads";
+   try {
+     await fs.access(uploadsDir);
+   } catch (error) {
+     await fs.mkdir(uploadsDir, { recursive: true });
+   }
+
   const files = await fs.readdir("./public/uploads");
   const images = files
     .filter((file) => file.endsWith(".jpg"))
