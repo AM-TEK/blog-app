@@ -16,6 +16,7 @@ model Post {
   title     String
   body      String
   imageUrl  String?
+  image     Bytes?
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 }
